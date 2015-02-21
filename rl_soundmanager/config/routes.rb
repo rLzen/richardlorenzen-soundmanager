@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :microposts
   
-  resources :users, :only => [:new, :edit, :show]
+  resources :users, :only => [:new, :show, :edit, :update, :destroy]
   
   root 'users#index'
 
