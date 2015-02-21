@@ -18,6 +18,12 @@ test:
   encoding: unicode
   database: my_database_test
   pool: 5
+
+production:
+  adapter: postgresql
+  enconding: unicode
+  database: my_database_production
+  pool: 5
  # username: myapp
   #password: password1
 
