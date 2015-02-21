@@ -5,5 +5,6 @@ class ApplicationController < ActionController::Base
   def hello
     render text: "hello, wordl!"
   end
-  
+  def users
+  end
 end
