@@ -45,8 +45,8 @@ group :development, :test do
   gem 'spring'
 group :production do
   
-  gem 'rails_12factor', ‘0.0.3’
+  gem 'rails_12factor'
+end
 
-ruby '2.0.0', :patchlevel => '353'
 end
 
