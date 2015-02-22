@@ -4,7 +4,7 @@ class StaticPagesControllerTest < ActionController::TestCase
   test "should get home" do
     get :home
     assert_response :success
-    assert_select "title", "Home | Sound Manager Testing App"
+    assert_select "title", "Sound Manager Testing App"
   end
 
   test "should get help" do
