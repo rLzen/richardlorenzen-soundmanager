@@ -1,0 +1,2 @@
+class CollectionListsController < ApplicationController
+end

@@ -11,14 +11,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150223194529) do
+ActiveRecord::Schema.define(version: 20150224085352) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "collection_lists", force: :cascade do |t|
+    t.string   "name"
+    t.string   "format"
+    t.time     "length"
+    t.integer  "size"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "collection_lists", ["user_id"], name: "index_collection_lists_on_user_id", using: :btree
+
+  create_table "lists", force: :cascade do |t|
+    t.string   "artist_name"
+    t.string   "album_name"
+    t.string   "song_name"
+    t.string   "format"
+    t.time     "length"
+    t.integer  "size"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "microposts", force: :cascade do |t|
     t.text     "content"
     t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "music_collections", force: :cascade do |t|
+    t.string   "name"
+    t.string   "format"
+    t.time     "length"
+    t.integer  "size"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -34,4 +66,5 @@ ActiveRecord::Schema.define(version: 20150223194529) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
+  add_foreign_key "collection_lists", "users"
 end
