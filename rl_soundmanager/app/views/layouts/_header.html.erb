@@ -1,7 +1,16 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
     <nav>
-      <ul class="nav navbar-nav navbar-right">
+				<div class="navbar-header">
+				    <a class="navbar-brand" href="#">Sound Manager</a>
+				    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				      <span class="icon-bar"></span>
+				      <span class="icon-bar"></span>
+				      <span class="icon-bar"></span>
+				    </button>
+				  </div>
+					<div class="navbar-collapse collapse">
+		<ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "Help", help_path %></li>
 		  	<li><%= link_to "Music List", list_path %></li>
