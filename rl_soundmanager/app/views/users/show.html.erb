@@ -12,9 +12,10 @@
 	<div class="col-md-8">
 
 		<h3>Lists</h3>
-		<p class="lists">
-		  <%= @user.lists %>
-	    </p>
+		<div class="actions">
+		<%= link_to "Create List", music_lists_path, class: "btn btn-lg btn-primary" %>
+	</div>
+	
 	</div>
 </div>
 

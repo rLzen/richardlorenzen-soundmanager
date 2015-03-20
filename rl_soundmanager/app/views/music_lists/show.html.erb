@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @music_list.name %>
+</p>
+
+<p>
+  <strong>Artist:</strong>
+  <%= @music_list.artist %>
+</p>
+
+<p>
+  <strong>Album:</strong>
+  <%= @music_list.album %>
+</p>
+
+<p>
+  <strong>Song:</strong>
+  <%= @music_list.song %>
+</p>
+
+<p>
+  <strong>Format:</strong>
+  <%= @music_list.format %>
+</p>
+
+<p>
+  <strong>Length:</strong>
+  <%= @music_list.length %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @music_list.size %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @music_list.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_music_list_path(@music_list) %> |
+<%= link_to 'Back', music_lists_path %>

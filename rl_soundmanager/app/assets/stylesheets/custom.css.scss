@@ -25,9 +25,18 @@ $gray-medium-light: #eaeaea;
   @include box_sizing;
 }
 
+
+.jumbotron {
+    height: 400px;
+    color: black;
+    text-shadow: #444 0 1px 1px;
+	background: url('/assests/images/recordSoundManager.jpg') no-repeat scroll top left;
+}
+
 /* universal */
 body {
 	padding-top: 70px;
+
 }
 
 section {

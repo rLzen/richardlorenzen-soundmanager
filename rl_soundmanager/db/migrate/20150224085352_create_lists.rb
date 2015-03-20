@@ -7,7 +7,7 @@ class CreateLists < ActiveRecord::Migration
       t.string :format
       t.time :length
       t.integer :size
-      t.references:user, index: true
+      t.references :user, index: true
 
       t.timestamps null: false
     end

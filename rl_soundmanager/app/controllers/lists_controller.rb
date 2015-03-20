@@ -1,5 +1,5 @@
 class ListsController < ApplicationController
-  before_action :logged_in_user, only: [:create, :destroy]
+  before_action :set_list, only: [:create, :destroy]
 
   # GET /lists
   # GET /lists.json
@@ -26,11 +26,10 @@ class ListsController < ApplicationController
   def create
     @list = current_user.lists.build(list_params)
       if @list.save
-        flash [:success] = "List Created!"
+        flash[:success] = "List Created!"
         redirect_to root_url
        else
          render 'static_pages/home'
-      end
     end
   end
 
@@ -60,9 +59,9 @@ class ListsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    #def set_list
-      #@list = List.find(params[:id])
-   # end
+    def set_list
+      @list = List.find(params[:id])
+    end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def list_params
