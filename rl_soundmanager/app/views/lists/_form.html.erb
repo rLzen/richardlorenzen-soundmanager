@@ -26,11 +26,10 @@
     <%= f.text_field :format, class:'form-control' %>
  
     <%= f.label :length %>
-		<%= f.number_field :length, class:'form-control' %>
-
+	<%= f.time_field :length, class:'form-control' %>
 
     <%= f.label :size %>
-    <%= f.number_field :size, class:'form-control' %>
+    <%= f.text_field :size, class:'form-control' %>
 
   <div class="actions">
     <%= f.submit "Create New List", class:"btn btn-success" %>
