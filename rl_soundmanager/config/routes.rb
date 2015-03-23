@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
 
 
+  
+
   #setting the first page 
   root 'static_pages#home'
   
@@ -12,9 +14,10 @@ Rails.application.routes.draw do
   get    'login'   =>    'sessions#new'
   post   'login'   =>    'sessions#create'
   delete 'logout'  =>    'sessions#destroy'
-	get    'list'    =>    'lists#new'
+	get    'music_list'    =>    'music_lists#new'
   resources :users
-	resources :lists
+  resources :music_lists
+
  
 
 end

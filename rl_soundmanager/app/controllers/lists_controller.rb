@@ -1,5 +1,5 @@
 class ListsController < ApplicationController
-  before_action :set_list, only: [:show, :edit, :update, :destroy]
+  before_action :set_list, only: [:create, :destroy]
 
   # GET /lists
   # GET /lists.json
@@ -24,31 +24,27 @@ class ListsController < ApplicationController
   # POST /lists
   # POST /lists.json
   def create
-    @list = List.new(list_params)
-
-    respond_to do |format|
+    @list = current_user.lists.build(list_params)
       if @list.save
-        format.html { redirect_to @list, notice: 'List was successfully created.' }
-        format.json { render :show, status: :created, location: @list }
-      else
-        format.html { render :new }
-        format.json { render json: @list.errors, status: :unprocessable_entity }
-      end
+        flash[:success] = "List Created!"
+        redirect_to root_url
+       else
+         render 'static_pages/home'
     end
   end
 
   # PATCH/PUT /lists/1
   # PATCH/PUT /lists/1.json
   def update
-    respond_to do |format|
-      if @list.update(list_params)
-        format.html { redirect_to @list, notice: 'List was successfully updated.' }
-        format.json { render :show, status: :ok, location: @list }
-      else
-        format.html { render :edit }
-        format.json { render json: @list.errors, status: :unprocessable_entity }
-      end
-    end
+    #respond_to do |format|
+     # if @list.update(list_params)
+      #  format.html { redirect_to @list, lists: 'List was successfully updated.' }
+       # format.json { render :show, status: :ok, location: @list }
+     # else
+       # format.html { render :edit }
+      #  format.json { render json: @list.errors, status: :unprocessable_entity }
+      #end
+      #end
   end
 
   # DELETE /lists/1

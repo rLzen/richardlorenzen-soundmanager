@@ -1,5 +1,6 @@
-<p id="notice"><%= notice %></p>
-
+<p id="list-<% list.id %>"/p>
+<%= link_to gravatar_for(@list.user, size:50), @list.user %>
+<span class="user"><%= link_to @list.user.name, @list.user %></span>
 <p>
   <strong>Artist name:</strong>
   <%= @list.artist_name %>

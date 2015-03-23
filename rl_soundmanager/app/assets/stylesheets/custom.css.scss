@@ -27,6 +27,7 @@ $gray-medium-light: #eaeaea;
 }
 
 
+<<<<<<< HEAD
 
 .jumbotron {
 
@@ -45,6 +46,19 @@ body {
 	padding-top: 70px;
 	/*background: url('recordSoundManager.png') no-repeat scroll center;*/
 	
+=======
+.jumbotron {
+    height: 400px;
+    color: black;
+    text-shadow: #444 0 1px 1px;
+	background: url('/assests/images/recordSoundManager.jpg') no-repeat scroll top left;
+}
+
+/* universal */
+body {
+	padding-top: 70px;
+
+>>>>>>> 7bde40de8e5ebc0833c0fdfa4782658e45359a17
 }
 
 section {
@@ -244,4 +258,37 @@ input {
 #session_remember_me {
   width: auto;
   margin-left: 0;
+}
+
+/* lists */
+.lists {
+  list-style: none;
+  padding: 0;
+  p {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+}
+
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+span.picture {
+  margin-top: 10px;
+  input {
+    border: 0;
+  }
 }
