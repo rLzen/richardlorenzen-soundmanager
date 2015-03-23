@@ -7,6 +7,11 @@
 				<%= gravatar_for @user %>
 				<%= @user.name %>
 			</h1>
+		   
 		</section>
 	</aside>
 </div>
+<div class="row">
+<%= link_to 'New List', new_list_path, class:"btn btn-success" %>
+<%= link_to 'Show List', lists_path, class:"btn btn-default" %>
+</div>	    
