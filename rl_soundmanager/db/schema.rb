@@ -11,10 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150320090125) do
+ActiveRecord::Schema.define(version: 20150326230927) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "collection_lists", force: :cascade do |t|
+    t.string   "name"
+    t.string   "format"
+    t.time     "length"
+    t.integer  "size"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "collection_lists", ["user_id"], name: "index_collection_lists_on_user_id", using: :btree
 
   create_table "lists", force: :cascade do |t|
     t.string   "artist_name"
@@ -25,6 +37,25 @@ ActiveRecord::Schema.define(version: 20150320090125) do
     t.integer  "size"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "users_id"
+  end
+
+  add_index "lists", ["users_id"], name: "index_lists_on_users_id", using: :btree
+
+  create_table "microposts", force: :cascade do |t|
+    t.text     "content"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "music_collections", force: :cascade do |t|
+    t.string   "name"
+    t.string   "format"
+    t.time     "length"
+    t.integer  "size"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "music_lists", force: :cascade do |t|
@@ -38,7 +69,10 @@ ActiveRecord::Schema.define(version: 20150320090125) do
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "users_id"
   end
+
+  add_index "music_lists", ["users_id"], name: "index_music_lists_on_users_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
@@ -51,4 +85,6 @@ ActiveRecord::Schema.define(version: 20150320090125) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
+  add_foreign_key "collection_lists", "users"
+  add_foreign_key "music_lists", "users"
 end

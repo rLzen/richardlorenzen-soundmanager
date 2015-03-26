@@ -1,5 +1,5 @@
 class MusicListsController < ApplicationController
-  before_action :set_music_list, only: [:show, :edit, :update, :destroy]
+  before_action :set_music_list, only: [:create, :destroy]
 
   # GET /music_lists
   # GET /music_lists.json

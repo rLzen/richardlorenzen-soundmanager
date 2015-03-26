@@ -90,11 +90,7 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.2)
-<<<<<<< HEAD
-    listen (2.8.5)
-=======
     listen (2.9.0)
->>>>>>> 7bde40de8e5ebc0833c0fdfa4782658e45359a17
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)

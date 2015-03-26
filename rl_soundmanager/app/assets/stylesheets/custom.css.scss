@@ -26,8 +26,7 @@ $gray-medium-light: #eaeaea;
   @include box_sizing;
 }
 
-
-<<<<<<< HEAD
+/* universal */
 
 .jumbotron {
 
@@ -36,29 +35,14 @@ $gray-medium-light: #eaeaea;
     color: gray;
     text-shadow: black 0.3em 0.3em 0.3em;
     background: transparent;
-	background: url('recordSoundManager.png') no-repeat scroll center;
+	background: url('recordSoundManager.png') no-repeat center;
 	
 }
 
 
-/* universal */
 body {
 	padding-top: 70px;
-	/*background: url('recordSoundManager.png') no-repeat scroll center;*/
-	
-=======
-.jumbotron {
-    height: 400px;
-    color: black;
-    text-shadow: #444 0 1px 1px;
-	background: url('/assests/images/recordSoundManager.jpg') no-repeat scroll top left;
-}
-
-/* universal */
-body {
-	padding-top: 70px;
-
->>>>>>> 7bde40de8e5ebc0833c0fdfa4782658e45359a17
+/*background: url('recordSoundManager.png') no-repeat scroll center;*/
 }
 
 section {

@@ -28,8 +28,6 @@
         <td><%= music_list.length.strftime('%R') %></td>
         <td><%= music_list.size %></td>
         <td><%= music_list.user_id %></td>
-        <td><%= link_to 'Show', music_list, class:"btn btn-default btn-xs" %></td>
-        <td><%= link_to 'Edit', edit_music_list_path(music_list), class:"btn btn-warning btn-xs" %></td>
         <td><%= link_to 'Destroy', music_list, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger btn-xs"  %></td>
     <% end %>
   </tbody>

@@ -12,6 +12,12 @@
   <% end %>
 	<div class="row">
 	<div class="col-xs-6 col-sm-offset-3">
+  <%= f.label :User %>
+  <%= f.number_field :user_id, class:'form-control' %>
+  
+  <%= f.label :Name %>
+  <%= f.text_field :name, class:'form-control' %>	
+  	
   <%= f.label :Artist %>
   <%= f.text_field :artist, class:'form-control' %>
 
@@ -29,10 +35,7 @@
 
   <%= f.label :Size %>
   <%= f.text_field :size, class:'form-control' %>
-
-  <%= f.label :User %>
-  <%= f.number_field :user_id, class:'form-control' %>
-
+  
   <div class="actions">
     <%= f.submit "Create New List", class:"btn btn-success" %>
   </div>
